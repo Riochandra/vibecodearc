@@ -68,6 +68,53 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min
 .mbtn.active-ma{background:linear-gradient(135deg,#1e3a5f,#163352);color:#60a5fa;box-shadow:0 0 10px rgba(96,165,250,.18);}
 .mbtn.active-rsi{background:linear-gradient(135deg,#3b1f1f,#2d1515);color:#f87171;box-shadow:0 0 10px rgba(248,113,113,.18);}
 .mbtn.active-boo{background:linear-gradient(135deg,#2d1f00,#1f1500);color:var(--orange);box-shadow:0 0 10px rgba(249,115,22,.2);}
+.mbtn.active-crypto{background:linear-gradient(135deg,#0d2b1f,#061f14);color:#00e5a0;box-shadow:0 0 10px rgba(0,229,160,.18);}
+/* CryptoLens styles */
+.cl-bg{background:#080b10;}
+.cl-surface{background:#0d1117;}
+.cl-surface2{background:#161c25;}
+.cl-border{border-color:#1e2733;}
+.cl-accent{color:#00e5a0;}
+.cl-accent2{color:#0095ff;}
+.cl-red{color:#ff4d6a;}
+.cl-green{color:#00e5a0;}
+.cl-text{color:#e8edf5;}
+.cl-muted{color:#566475;}
+.cl-muted2{color:#8a9ab0;}
+.cl-mono{font-family:'Space Mono',monospace;}
+.cl-stats-bar{display:flex;gap:24px;padding:16px 0;border-bottom:1px solid #1e2733;margin-bottom:16px;flex-wrap:wrap;}
+.cl-stat-item{display:flex;flex-direction:column;gap:4px;}
+.cl-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#566475;}
+.cl-stat-value{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#e8edf5;}
+.cl-controls{display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;}
+.cl-search-wrap{position:relative;display:flex;align-items:center;background:#161c25;border:1px solid #1e2733;border-radius:8px;padding:8px 12px;gap:8px;}
+.cl-search-input{background:transparent;border:none;outline:none;color:#e8edf5;font-family:'DM Sans',sans-serif;font-size:13px;width:200px;}
+.cl-per-page-select{background:#161c25;border:1px solid #1e2733;border-radius:6px;color:#e8edf5;font-family:'DM Mono',monospace;font-size:11px;padding:8px 12px;cursor:pointer;}
+.cl-table-wrap{position:relative;overflow-x:auto;border:1px solid #1e2733;border-radius:10px;background:#0d1117;}
+.cl-loading-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:rgba(8,11,16,.92);z-index:10;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;color:#8a9ab0;}
+.cl-error-msg{padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:12px;color:#ff4d6a;background:rgba(255,77,106,.08);border-radius:8px;margin-bottom:16px;}
+.cl-table{width:100%;border-collapse:collapse;}
+.cl-table th{padding:14px 12px;text-align:left;font-family:'Space Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#8a9ab0;border-bottom:1px solid #1e2733;cursor:pointer;white-space:nowrap;}
+.cl-table th:hover{color:#00e5a0;}
+.cl-table td{padding:14px 12px;border-bottom:1px solid #1e2733;vertical-align:middle;}
+.cl-table tbody tr:hover{background:rgba(0,229,160,.03);}
+.cl-rank{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#8a9ab0;}
+.cl-coin-wrap{display:flex;align-items:center;gap:10px;}
+.cl-coin-icon{width:28px;height:28px;border-radius:50%;background:#161c25;border:1px solid #1e2733;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:9px;color:#8a9ab0;flex-shrink:0;}
+.cl-coin-name{font-weight:600;font-size:13px;color:#e8edf5;}
+.cl-coin-symbol{font-family:'Space Mono',monospace;font-size:10px;color:#566475;text-transform:uppercase;}
+.cl-price{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#e8edf5;}
+.cl-change{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;}
+.cl-change.up{color:#00e5a0;}
+.cl-change.down{color:#ff4d6a;}
+.cl-mcap,.cl-fdv,.cl-vol{font-family:'Space Mono',monospace;font-size:12px;color:#8a9ab0;}
+.cl-website-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:7px;border:1px solid #1e2733;color:#566475;text-decoration:none;transition:all .15s;}
+.cl-website-link:hover{border-color:#00e5a0;color:#00e5a0;background:rgba(0,229,160,.08);}
+.cl-pagination{display:flex;justify-content:center;gap:8px;margin-top:24px;}
+.cl-page-btn{padding:8px 14px;border:1px solid #1e2733;border-radius:6px;background:#161c25;color:#8a9ab0;font-family:'DM Mono',monospace;font-size:11px;cursor:pointer;transition:all .15s;}
+.cl-page-btn:hover{border-color:#00e5a0;color:#00e5a0;}
+.cl-page-btn.active{background:#00e5a0;color:#000;border-color:#00e5a0;}
+.cl-results-count{font-family:'Space Mono',monospace;font-size:11px;color:#566475;}
 /* MTF filter blocks */
 .mtf-row{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;}
 .mtf-blocks{display:flex;gap:10px;flex-wrap:wrap;}
@@ -198,6 +245,7 @@ td{padding:10px 13px;font-size:11px;color:var(--text2);white-space:nowrap;vertic
         <div class="mbtn active-ma" id="modeMA" onclick="setMode('ma')">200 MA/EMA</div>
         <div class="mbtn" id="modeRSI" onclick="setMode('rsi')">RSI</div>
         <div class="mbtn" id="modeBOO" onclick="setMode('boo')">&#9889; Booing</div>
+        <div class="mbtn" id="modeCRYPTO" onclick="setMode('crypto')">&#128176; Crypto Lens</div>
       </div>
     </div>
     <div class="cdiv"></div>
@@ -487,6 +535,55 @@ td{padding:10px 13px;font-size:11px;color:var(--text2);white-space:nowrap;vertic
       </div></div>
     </div>
   </div>
+</div>
+
+<div id="cryptoResults" style="display:none">
+  <div class="cl-stats-bar" id="clStatsBar">
+    <div class="cl-stat-item"><span class="cl-stat-label">Global MCap</span><span class="cl-stat-value" id="clGlobalMcap">—</span></div>
+    <div class="cl-stat-item"><span class="cl-stat-label">24h Vol</span><span class="cl-stat-value" id="clGlobalVol">—</span></div>
+    <div class="cl-stat-item"><span class="cl-stat-label">BTC Dom</span><span class="cl-stat-value" id="clBtcDom">—</span></div>
+    <div class="cl-stat-item"><span class="cl-stat-label">ETH Dom</span><span class="cl-stat-value" id="clEthDom">—</span></div>
+    <div class="cl-stat-item"><span class="cl-stat-label">Active Coins</span><span class="cl-stat-value" id="clActiveCoins">—</span></div>
+    <div class="cl-stat-item"><span class="cl-stat-label">Last Updated</span><span class="cl-stat-value" id="clLastUpdated">—</span></div>
+  </div>
+  <div class="cl-controls">
+    <div class="cl-search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9ab0" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="cl-search-input" id="clSearchInput" placeholder="Search coins..." oninput="clFilterCoins()">
+    </div>
+    <select class="cl-per-page-select" id="clPerPage" onchange="clChangePerPage()">
+      <option value="25">25 / page</option>
+      <option value="50" selected>50 / page</option>
+      <option value="100">100 / page</option>
+    </select>
+    <div class="cl-results-count" id="clResultsCount"></div>
+  </div>
+  <div class="cl-table-wrap">
+    <div class="cl-loading-overlay" id="clLoadingOverlay" style="display:none">
+      <div class="loader"></div>
+      FETCHING MARKET DATA...
+    </div>
+    <div id="clErrorMsg" class="cl-error-msg" style="display:none"></div>
+    <table class="cl-table" id="clCryptoTable" style="display:none">
+      <thead>
+        <tr>
+          <th onclick="clSortBy('rank')" id="clThRank"># <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('name')" id="clThName">Name <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('price')" id="clThPrice">Price <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('change')" id="clThChange">24h % <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('mcap')" id="clThMcap">Market Cap <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('fdv')" id="clThFdv">FDV <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('vol')" id="clThVol">Volume 24h <span class="sort-arrow">↕</span></th>
+          <th onclick="clSortBy('volpct')" id="clThVolpct">Vol/MCap <span class="sort-arrow">↕</span></th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody id="clTableBody"></tbody>
+    </table>
+  </div>
+  <div class="cl-pagination" id="clPagination"></div>
 </div>
 
 <div class="ftags">
@@ -1057,17 +1154,19 @@ function updateTags() {
 }
 function setMode(m) {
   S.mode = m;
-  const isMA = m === 'ma', isRSI = m === 'rsi', isBoo = m === 'boo';
+  const isMA = m === 'ma', isRSI = m === 'rsi', isBoo = m === 'boo', isCrypto = m === 'crypto';
   document.getElementById('modeMA').className = 'mbtn' + (isMA ? ' active-ma' : '');
   document.getElementById('modeRSI').className = 'mbtn' + (isRSI ? ' active-rsi' : '');
   document.getElementById('modeBOO').className = 'mbtn' + (isBoo ? ' active-boo' : '');
+  document.getElementById('modeCRYPTO').className = 'mbtn' + (isCrypto ? ' active-crypto' : '');
   document.getElementById('rowMA').style.display = isMA ? 'flex' : 'none';
   document.getElementById('rowRSI').style.display = isRSI ? 'flex' : 'none';
-  document.getElementById('grpMain').style.display = isBoo ? 'none' : 'flex';
+  document.getElementById('grpMain').style.display = (isBoo || isCrypto) ? 'none' : 'flex';
   document.getElementById('grpRSIex').style.display = isRSI ? 'flex' : 'none';
   document.getElementById('grpBoo').style.display = isBoo ? 'flex' : 'none';
-  document.getElementById('mainResults').style.display = isBoo ? 'none' : 'block';
+  document.getElementById('mainResults').style.display = (isBoo || isCrypto) ? 'none' : 'block';
   document.getElementById('booResults').style.display = isBoo ? 'block' : 'none';
+  document.getElementById('cryptoResults').style.display = isCrypto ? 'block' : 'none';
   document.querySelectorAll('.mc').forEach(function(e) { e.style.display = isMA ? '' : 'none'; });
   document.querySelectorAll('.rc').forEach(function(e) { e.style.display = isRSI ? '' : 'none'; });
   document.querySelectorAll('.ma-sb').forEach(function(e) { e.style.display = isMA ? '' : 'none'; });
@@ -1075,15 +1174,15 @@ function setMode(m) {
   document.getElementById('ftA').style.display = isMA ? '' : 'none';
   document.getElementById('ftB').style.display = isMA ? '' : 'none';
   document.getElementById('ftRsi').style.display = isRSI ? '' : 'none';
-  document.getElementById('ftP').style.display = isBoo ? 'none' : '';
+  document.getElementById('ftP').style.display = (isBoo || isCrypto) ? 'none' : '';
   const mt = document.getElementById('ftMode');
-  mt.textContent = isMA ? 'MA/EMA' : isRSI ? 'RSI' : '⚡ Booing';
-  mt.className = 'ft ' + (isMA ? 'mode-ma' : isRSI ? 'mode-rsi' : 'mode-boo');
+  mt.textContent = isMA ? 'MA/EMA' : isRSI ? 'RSI' : isBoo ? '⚡ Booing' : '💰 Crypto Lens';
+  mt.className = 'ft ' + (isMA ? 'mode-ma' : isRSI ? 'mode-rsi' : isBoo ? 'mode-boo' : 'mode-crypto');
   document.querySelectorAll('.sbtn').forEach(function(b) { b.classList.remove('active'); });
   document.querySelector('.sbtn').classList.add('active');
   S.sort = 'volume';
   updateTags();
-  if (isBoo) runBooing(); else runScan();
+  if (isCrypto) clLoadData(); else if (isBoo) runBooing(); else runScan();
 }
 function setDirA(d) {
   S.dirA = d;
@@ -1283,6 +1382,365 @@ window.addEventListener('load', function() {
   S.booRefTimer = setInterval(function() { if (S.mode === 'boo') runBooing(); }, 300000);
   runScan();
 });
+
+// Crypto Lens functions
+let clAllCoins = [];
+let clFiltered = [];
+let clSortKey = 'rank';
+let clSortDir = 1;
+let clCurrentPage = 1;
+let clPerPage = 50;
+let clAutoRefreshTimer;
+let clSearchDebounceTimer;
+let clIsSearchMode = false;
+
+const clCoinWebsites = {
+  'bitcoin': 'https://bitcoin.org',
+  'ethereum': 'https://ethereum.org',
+  'tether': 'https://tether.to',
+  'binancecoin': 'https://www.bnbchain.org',
+  'solana': 'https://solana.com',
+  'ripple': 'https://ripple.com',
+  'usd-coin': 'https://www.circle.com/usdc',
+  'dogecoin': 'https://dogecoin.com',
+  'cardano': 'https://cardano.org',
+  'avalanche-2': 'https://avax.network',
+  'shiba-inu': 'https://shibatoken.com',
+  'polkadot': 'https://polkadot.network',
+  'chainlink': 'https://chain.link',
+  'tron': 'https://tron.network',
+  'polygon': 'https://polygon.technology',
+  'toncoin': 'https://ton.org',
+  'wrapped-bitcoin': 'https://wbtc.network',
+  'dai': 'https://makerdao.com',
+  'uniswap': 'https://uniswap.org',
+  'litecoin': 'https://litecoin.org',
+  'internet-computer': 'https://internetcomputer.org',
+  'cosmos': 'https://cosmos.network',
+  'ethereum-classic': 'https://ethereumclassic.org',
+  'stellar': 'https://stellar.org',
+  'monero': 'https://getmonero.org',
+  'algorand': 'https://algorand.com',
+  'filecoin': 'https://filecoin.io',
+  'hedera-hashgraph': 'https://hedera.com',
+  'aptos': 'https://aptoslabs.com',
+  'arbitrum': 'https://arbitrum.io',
+  'near': 'https://near.org',
+  'optimism': 'https://optimism.io',
+  'sui': 'https://sui.io',
+  'stacks': 'https://stacks.co',
+  'render-token': 'https://rendernetwork.com',
+  'injective-protocol': 'https://injectiveprotocol.com',
+  'immutable-x': 'https://immutable.com',
+  'aave': 'https://aave.com',
+  'maker': 'https://makerdao.com',
+  'the-graph': 'https://thegraph.com',
+  'okb': 'https://www.okx.com',
+  'cronos': 'https://crypto.com/chain',
+  'theta-token': 'https://thetatoken.org',
+  'vechain': 'https://vechain.org',
+  'fantom': 'https://fantom.foundation',
+  'eos': 'https://eos.io',
+  'thorchain': 'https://thorchain.org',
+  'kucoin-shares': 'https://www.kucoin.com',
+  'flow': 'https://flow.com',
+  'decentraland': 'https://decentraland.org',
+  'the-sandbox': 'https://sandbox.game',
+  'axie-infinity': 'https://axieinfinity.com',
+};
+
+function clFmt(n) {
+  if (n == null) return '—';
+  if (n >= 1e12) return '$' + (n / 1e12).toFixed(2) + 'T';
+  if (n >= 1e9)  return '$' + (n / 1e9).toFixed(2) + 'B';
+  if (n >= 1e6)  return '$' + (n / 1e6).toFixed(2) + 'M';
+  if (n >= 1e3)  return '$' + (n / 1e3).toFixed(2) + 'K';
+  return '$' + n.toFixed(2);
+}
+
+function clFmtPrice(n) {
+  if (n == null) return '—';
+  if (n >= 1000) return '$' + n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  if (n >= 1)    return '$' + n.toFixed(4);
+  if (n >= 0.01) return '$' + n.toFixed(5);
+  if (n >= 0.0001) return '$' + n.toFixed(6);
+  return '$' + n.toExponential(3);
+}
+
+function clFmtGlobal(n) {
+  if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+  if (n >= 1e9)  return '$' + (n/1e9).toFixed(2) + 'B';
+  return '$' + n.toFixed(0);
+}
+
+async function clLoadGlobalData() {
+  try {
+    const res = await fetch('https://api.coingecko.com/api/v3/global');
+    const d = await res.json();
+    const g = d.data;
+    document.getElementById('clGlobalMcap').textContent = clFmtGlobal(g.total_market_cap.usd);
+    document.getElementById('clGlobalVol').textContent = clFmtGlobal(g.total_volume.usd);
+    document.getElementById('clBtcDom').textContent = g.market_cap_percentage.btc.toFixed(1) + '%';
+    document.getElementById('clEthDom').textContent = g.market_cap_percentage.eth.toFixed(1) + '%';
+    document.getElementById('clActiveCoins').textContent = g.active_cryptocurrencies.toLocaleString();
+  } catch(e) {}
+}
+
+async function clSafeJson(res) {
+  const text = await res.text();
+  if (!text || (text.trim()[0] !== '{' && text.trim()[0] !== '[')) {
+    const hint = res.status === 429 ? 'Rate limited by CoinGecko — wait a few seconds and try again.'
+               : res.status === 403 ? 'Access denied by CoinGecko API.'
+               : `API returned status ${res.status}. Try again shortly.`;
+    throw new Error(hint);
+  }
+  return JSON.parse(text);
+}
+
+async function clLoadData() {
+  const overlay = document.getElementById('clLoadingOverlay');
+  const errorMsg = document.getElementById('clErrorMsg');
+  const table = document.getElementById('clCryptoTable');
+  
+  overlay.style.display = 'flex';
+  errorMsg.style.display = 'none';
+  table.style.display = 'none';
+
+  try {
+    const [r1, r2] = await Promise.all([
+      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h'),
+      fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=2&sparkline=false&price_change_percentage=24h')
+    ]);
+
+    const d1 = await clSafeJson(r1);
+    const d2 = await clSafeJson(r2);
+    clAllCoins = [...(Array.isArray(d1) ? d1 : []), ...(Array.isArray(d2) ? d2 : [])];
+
+    document.getElementById('clLastUpdated').textContent = new Date().toLocaleTimeString();
+    overlay.style.display = 'none';
+    table.style.display = '';
+
+    if (!clIsSearchMode) {
+      clFiltered = [...clAllCoins];
+      clSortCoins();
+      clCurrentPage = 1;
+      clRenderTable();
+    }
+
+    clLoadGlobalData();
+  } catch(e) {
+    overlay.style.display = 'none';
+    const em = document.getElementById('clErrorMsg');
+    em.style.display = 'block';
+    em.textContent = '⚠ Failed to fetch data. Check your connection or try again. (' + e.message + ')';
+  }
+
+  clearTimeout(clAutoRefreshTimer);
+  clAutoRefreshTimer = setTimeout(clLoadData, 60000);
+}
+
+function clFilterCoins() {
+  const q = document.getElementById('clSearchInput').value.trim();
+
+  if (!q) {
+    clIsSearchMode = false;
+    clFiltered = [...clAllCoins];
+    clSortCoins();
+    clCurrentPage = 1;
+    clRenderTable();
+    return;
+  }
+
+  clearTimeout(clSearchDebounceTimer);
+  clSearchDebounceTimer = setTimeout(() => clDoSearch(q), 400);
+}
+
+async function clDoSearch(q) {
+  clIsSearchMode = true;
+  const tbody = document.getElementById('clTableBody');
+  document.getElementById('clCryptoTable').style.display = '';
+  document.getElementById('clLoadingOverlay').style.display = 'none';
+  tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:32px;color:#8a9ab0;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;">
+    <div style="display:inline-flex;align-items:center;gap:10px;"><div class="loader" style="width:18px;height:18px;border-width:2px"></div> SEARCHING FULL DATABASE...</div>
+  </td></tr>`;
+  document.getElementById('clResultsCount').textContent = 'searching…';
+  document.getElementById('clPagination').innerHTML = '';
+
+  try {
+    const searchRes = await fetch(`https://api.coingecko.com/api/v3/search?query=${encodeURIComponent(q)}`);
+    const searchData = await clSafeJson(searchRes);
+    const coins = searchData.coins || [];
+
+    if (coins.length === 0) {
+      clFiltered = [];
+      clRenderTable();
+      return;
+    }
+
+    const ids = coins.slice(0, 20).map(c => c.id).join(',');
+    const marketRes = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${encodeURIComponent(ids)}&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h`);
+    const marketData = await clSafeJson(marketRes);
+
+    clFiltered = Array.isArray(marketData) ? marketData : [];
+
+    const idOrder = coins.map(c => c.id);
+    clFiltered.sort((a, b) => idOrder.indexOf(a.id) - idOrder.indexOf(b.id));
+
+    clCurrentPage = 1;
+    clRenderTable();
+  } catch(e) {
+    tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:40px 20px;font-family:'Space Mono',monospace;font-size:12px;">
+      <div style="color:#ff4d6a;margin-bottom:8px;">⚠ ${e.message}</div>
+      <div style="color:#566475;font-size:10px;">CoinGecko's free API has rate limits. Wait a moment and try again.</div>
+    </td></tr>`;
+    document.getElementById('clResultsCount').textContent = '';
+  }
+}
+
+function clSortBy(key) {
+  if (clSortKey === key) clSortDir *= -1;
+  else { clSortKey = key; clSortDir = 1; }
+  document.querySelectorAll('#clCryptoTable th').forEach(t => t.classList.remove('sorted'));
+  const th = document.getElementById('clTh-' + key);
+  if (th) th.classList.add('sorted');
+  clSortCoins();
+  clRenderTable();
+}
+
+function clSortCoins() {
+  const keyMap = {
+    rank: c => c.market_cap_rank || 9999,
+    name: c => c.name.toLowerCase(),
+    price: c => c.current_price || 0,
+    change: c => c.price_change_percentage_24h || 0,
+    mcap: c => c.market_cap || 0,
+    fdv: c => c.fully_diluted_valuation || 0,
+    vol: c => c.total_volume || 0,
+    volpct: c => (c.total_volume && c.market_cap) ? c.total_volume / c.market_cap : 0,
+  };
+  const fn = keyMap[clSortKey] || (c => c.market_cap_rank);
+  clFiltered.sort((a, b) => {
+    const va = fn(a), vb = fn(b);
+    if (typeof va === 'string' && typeof vb === 'string') return clSortDir * va.localeCompare(vb);
+    return clSortDir * ((va > vb) ? 1 : (va < vb) ? -1 : 0);
+  });
+}
+
+function clChangePerPage() {
+  clPerPage = parseInt(document.getElementById('clPerPage').value);
+  clCurrentPage = 1;
+  clRenderTable();
+}
+
+function clRenderTable() {
+  const start = (clCurrentPage - 1) * clPerPage;
+  const page = clFiltered.slice(start, start + clPerPage);
+  const tbody = document.getElementById('clTableBody');
+
+  document.getElementById('clResultsCount').textContent =
+    clFiltered.length + ' coins' + (clAllCoins.length !== clFiltered.length ? ' (filtered)' : '');
+
+  if (page.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:40px;color:#8a9ab0;font-family:\'Space Mono\',monospace;font-size:12px;">NO RESULTS FOUND</td></tr>';
+  } else {
+    tbody.innerHTML = page.map((c, i) => {
+      const chg = c.price_change_percentage_24h;
+      const chgClass = chg >= 0 ? 'up' : 'down';
+      const chgArrow = chg >= 0 ? '▲' : '▼';
+      const chgStr = chg != null ? `${chgArrow} ${Math.abs(chg).toFixed(2)}%` : '—';
+
+      const volPct = (c.total_volume && c.market_cap) ? (c.total_volume / c.market_cap * 100) : null;
+      const volPctStr = volPct != null ? volPct.toFixed(2) + '%' : '—';
+      const barWidth = volPct != null ? Math.min(volPct * 2, 100) : 0;
+
+      const website = clCoinWebsites[c.id];
+      const linkEl = website
+        ? `<a href="${website}" target="_blank" class="cl-website-link" title="Official Website">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </a>`
+        : `<a href="https://www.coingecko.com/en/coins/${c.id}" target="_blank" class="cl-website-link" title="CoinGecko Page">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>`;
+
+      const iconEl = c.image
+        ? `<img src="${c.image}" alt="${c.name}" loading="lazy" style="width:28px;height:28px;border-radius:50%;background:#161c25;border:1px solid #1e2733;" onerror="this.style.display='none'">`
+        : '';
+
+      return `<tr style="animation-delay:${i * 0.02}s">
+        <td><div class="cl-rank">${c.market_cap_rank || '—'}</div></td>
+        <td>
+          <div class="cl-coin-wrap">
+            ${iconEl}
+            <div>
+              <div class="cl-coin-name">${c.name}</div>
+              <div class="cl-coin-symbol">${c.symbol}</div>
+            </div>
+          </div>
+        </td>
+        <td><span class="cl-price">${clFmtPrice(c.current_price)}</span></td>
+        <td><span class="cl-change ${chgClass}">${chgStr}</span></td>
+        <td><span class="cl-mcap">${clFmt(c.market_cap)}</span></td>
+        <td><span class="cl-fdv">${clFmt(c.fully_diluted_valuation)}</span></td>
+        <td><span class="cl-vol">${clFmt(c.total_volume)}</span></td>
+        <td>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+            <span class="cl-vol-pct" style="font-family:'Space Mono',monospace;font-size:11px;color:#0095ff;">${volPctStr}</span>
+            <div style="width:60px;height:3px;background:#1e2733;border-radius:2px;overflow:hidden;">
+              <div style="height:100%;background:linear-gradient(90deg,#0095ff,#00e5a0);border-radius:2px;transition:width .6s ease;width:${barWidth}%"></div>
+            </div>
+          </div>
+        </td>
+        <td>${linkEl}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  clRenderPagination();
+}
+
+function clRenderPagination() {
+  const totalPages = Math.ceil(clFiltered.length / clPerPage);
+  const pag = document.getElementById('clPagination');
+  if (totalPages <= 1) { pag.innerHTML = ''; return; }
+
+  let html = '';
+  html += `<button class="cl-page-btn" onclick="clGoPage(${clCurrentPage-1})" ${clCurrentPage===1?'disabled':''}>← Prev</button>`;
+
+  const range = [];
+  for (let i = 1; i <= totalPages; i++) {
+    if (i === 1 || i === totalPages || (i >= clCurrentPage-2 && i <= clCurrentPage+2)) {
+      range.push(i);
+    } else if (range[range.length-1] !== '…') {
+      range.push('…');
+    }
+  }
+
+  range.forEach(p => {
+    if (p === '…') {
+      html += `<button class="cl-page-btn" disabled>…</button>`;
+    } else {
+      html += `<button class="cl-page-btn ${p===clCurrentPage?'active':''}" onclick="clGoPage(${p})">${p}</button>`;
+    }
+  });
+
+  html += `<button class="cl-page-btn" onclick="clGoPage(${clCurrentPage+1})" ${clCurrentPage===totalPages?'disabled':''}>Next →</button>`;
+  pag.innerHTML = html;
+}
+
+function clGoPage(p) {
+  const totalPages = Math.ceil(clFiltered.length / clPerPage);
+  if (p < 1 || p > totalPages) return;
+  clCurrentPage = p;
+  clRenderTable();
+}
 </script>
 </body>
 </html>
